@@ -1,9 +1,9 @@
 ---
 layout: layouts/post.njk
-title: mp Profile
+title: my Contact
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
+  key: Contact
   order: 3
 ---
 
