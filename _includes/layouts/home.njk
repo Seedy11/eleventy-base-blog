@@ -3,9 +3,10 @@ layout: layouts/base.njk
 templateClass: tmpl-home
 ---
 {{ content | safe }}
-<form action="">
+<form id="contact">
  <label for="fname">first name </label><br>
  <input type="text" id="lname" name="fname" required><br>
+
  <label for="lname">Last name name </label ><br>
  <input type="text" id="lname" name="lname" required><br>
 
@@ -13,21 +14,16 @@ templateClass: tmpl-home
 </form>
 
 <script>
-   function validateMyForm() {
-     e.preventDefault();
+  document.getElementById("contact").addEventLister("submit", function(event){
+    var firstName = document.getElementById("fname").value;
+    var lastName = document.getElementById("lname").value;
 
-     if(check if your condition are not satisfying){
-       alert("validation failed false");
-       returnToPreviousPage();
+    if (!firstName) {
+      alert("No firstName");
+    }
 
-       return false;
-     }
-     alert("validation passed");
-
-     return true;
-   }
-
-
-
-
+    if (!lastName) {
+      alert("No lastName");
+    }
+  })
 </script>
