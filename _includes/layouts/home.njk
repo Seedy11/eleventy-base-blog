@@ -3,3 +3,11 @@ layout: layouts/base.njk
 templateClass: tmpl-home
 ---
 {{ content | safe }}
+<form>
+ <label for="fname">first name </label>
+ <input type="text" id="lname" name="fname">
+ <label for="lname">Last name name </label>
+ <input type="text" id="lname" name="lname">
+
+ <input type="button" name="submit" value="submit"/>
+</form>
