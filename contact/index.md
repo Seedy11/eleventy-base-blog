@@ -1,5 +1,6 @@
+---
 layout: layouts/post.njk
-title: Contact
+title: mp Profile
 templateClass: tmpl-post
 eleventyNavigation:
   key: About Me
@@ -7,5 +8,6 @@ eleventyNavigation:
 ---
 
 I am a person that writes stuff.my name is Seedy Darbo
+
 
 <h1>contact</h1>
