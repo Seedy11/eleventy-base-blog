@@ -3,27 +3,24 @@ layout: layouts/base.njk
 templateClass: tmpl-home
 ---
 {{ content | safe }}
-<form id="contact">
- <label for="fname">first name </label><br>
- <input type="text" id="lname" name="fname" required><br>
 
- <label for="lname">Last name name </label ><br>
- <input type="text" id="lname" name="lname" required><br>
-
- <input type="button" name="submit" value="submit"/>
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
 </form>
-
-<script>
-  document.getElementById("contact").addEventListener("submit", function(event){
-    var firstName = document.getElementById("fname").value;
-    var lastName = document.getElementById("lname").value;
-
-    if (!firstName) {
-      alert("No firstName");
-    }
-
-    if (!lastName) {
-      alert("No lastName");
-    }
-  })
-</script>
